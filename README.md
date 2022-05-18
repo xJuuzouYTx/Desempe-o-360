@@ -224,5 +224,6 @@ function doGet(e) {
         }
       }
     }
-     
+   
+   return params;
 ```
