@@ -63,3 +63,42 @@ function doGet(e) {
   .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)
   .setTitle("Evaluación de desempeño - Versión Estándar");
 ```
+
+### StartApplication() - GS_Evaluations.gs - getEvaluationInfo()
+```js
+ // Se invoca la función que valida la información del usuario en la hoja de administración
+    consultUsersEvaluation_(adminSpreadsheet, params, resources.usersSheetName, usersListData);}
+    /* params
+    { userEmail: 'proyectos@sinova.co',
+      userInfo: { 
+        subalterns: { 'hugo.gonzalez@sinova.co': [Object] },
+        name: 'Proyectos',
+        email: 'proyectos@sinova.co',
+        admissionDate: '01/07/2014',
+        area: 'Gerencia',
+        charge: 'Director' } 
+      }
+     */
+     
+      // Se invoca la función que consulta la información de evaluaciones
+    consultEvaluationInfo_(adminSpreadsheet, params, resources.evaluationsSheetName);
+     /* 
+     { 
+     userEmail: 'proyectos@sinova.co',
+  userInfo: 
+   { subalterns: { 'hugo.gonzalez@sinova.co': [Object] },
+     name: 'Proyectos',
+     email: 'proyectos@sinova.co',
+     admissionDate: '01/07/2014',
+     area: 'Gerencia',
+     charge: 'Director' },
+  evaluation: 
+   { state: 'opened',
+     index: 2,
+     name: 'SNVA - Evaluación 2020',
+     openDate: '14/08/2020',
+     closeDate: '',
+     resultsSpreadsheetId: '1pkJH0V7fKJqQPaVZ79V9lRS3b7nVx97-_AkvCSNFboM' } }
+     */
+     
+```
