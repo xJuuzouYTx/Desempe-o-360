@@ -201,5 +201,28 @@ function doGet(e) {
         */
       }
     }
+    
+     // Se valida si existe el objeto del usuario en la Hoja de Administración
+    if (params.userInfo && params.evaluation) {
+      // Se valida si se tiene definida la propiedad de la evaluación que actualmente se encuentra en ejecución
+      if (params.evaluation.resultsSpreadsheetId) {
+        try {
+          // Se obtiene la hoja de resultados de la evaluaciónusando la API SpreadsheetApp
+          var evaluationSpreadsheet = SpreadsheetApp.openById(params.evaluation.resultsSpreadsheetId);
+          
+          // Se invoca la función que consulta el resultado de la evaluación
+          consultEvaluationsResult_(evaluationSpreadsheet, params, resources.resultsSheetName, usersListData);
+
+          // Se valida si no existe el objeto de los resultados de las evaluaciones
+          if (!params.evaluations) {
+            // Se elimina la propiedad de la evaluación
+            delete params.evaluation;
+          }
+
+        } catch (ex) {
+          saveError_(ex);
+        }
+      }
+    }
      
 ```
