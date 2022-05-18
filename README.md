@@ -30,7 +30,7 @@ function doGet(e) {
 
   // Se invoca la función que valida los roles de usuario en el aplicativo (Administrador y Jefe Inmediato)
   validateUserApplication_(userInfo, resources);
-  /* 
+  /* UserInfo
   { 
     email: 'proyectos@sinova.co',
     name: 'Proyectos',
