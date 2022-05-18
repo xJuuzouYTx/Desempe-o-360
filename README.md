@@ -229,6 +229,7 @@ function doGet(e) {
 ```
 
 ###setUserApplication() - JS_EValuationData.html 
+```
   // Se carga el formulario de información del usuario
       setUserPanel(result.userInfo);
       // Se carga el panel de evaluaciones
@@ -241,3 +242,4 @@ function doGet(e) {
       setSelectValues($selectRating, ratingOptions, function($select, index, value) {
         $select.append($("<option>").attr("value", index).text(value));
       }, true, true, "- seleccione -");
+```
