@@ -227,3 +227,17 @@ function doGet(e) {
    
    return params;
 ```
+
+###setUserApplication() - JS_EValuationData.html 
+  // Se carga el formulario de información del usuario
+      setUserPanel(result.userInfo);
+      // Se carga el panel de evaluaciones
+      validateEvaluationPanel(result);
+      
+      // Se asigna el listado de escalas de calificación en la variable "ratingOptions"
+      ratingOptions = result.ratingScale;
+      
+      // Se inserta los valores en el select
+      setSelectValues($selectRating, ratingOptions, function($select, index, value) {
+        $select.append($("<option>").attr("value", index).text(value));
+      }, true, true, "- seleccione -");
