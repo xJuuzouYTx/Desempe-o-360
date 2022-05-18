@@ -101,4 +101,105 @@ function doGet(e) {
      resultsSpreadsheetId: '1pkJH0V7fKJqQPaVZ79V9lRS3b7nVx97-_AkvCSNFboM' } }
      */
      
+     // Se valida si existe el objeto de la evaluación
+    if (params.evaluation) {
+      // Se valida si la evaluación aun se encuentra abierta, para posteriormente consultar la información respectiva
+      if (params.evaluation.state == "opened") {
+        // Se invoca la función que obtiene la escala de calificación
+        consultRatingScale_(adminSpreadsheet, params, resources.ratingScaleSheetName);
+        /*
+        "ratingScale":{
+          "1":"Nunca",
+          "2":"Casi nunca",
+          "3":"A veces",
+           "4":"Casi siempre",
+          "5":"Siempre"
+        },*/
+        // Se invoca la función que consulta los indicadores de evaluación
+        consultIndicators_(adminSpreadsheet, params, resources.indicatorsSheetName);
+        /* 
+        "indicators":{
+   "autoevaluation":{
+      "Cumplimiento":[
+         "Object"
+      ],
+      "Liderazgo":[
+         "Object"
+      ],
+      "Compromiso":[
+         "Object"
+      ],
+      "Aprendizaje":[
+         "Object"
+      ],
+      "Productividad":[
+         "Object"
+      ],
+      "Eficacia":[
+         "Object"
+      ]
+   },
+   "subalternEvaluation":{
+      "Cumplimiento":[
+         "Object"
+      ],
+      "Liderazgo":[
+         "Object"
+      ],
+      "Compromiso":[
+         "Object"
+      ],
+      "Aprendizaje":[
+         "Object"
+      ],
+      "Productividad":[
+         "Object"
+      ],
+      "Eficacia":[
+         "Object"
+      ]
+   },
+   "leaderEvaluation":{
+      "Cumplimiento":[
+         "Object"
+      ],
+      "Liderazgo":[
+         "Object"
+      ],
+      "Compromiso":[
+         "Object"
+      ],
+      "Aprendizaje":[
+         "Object"
+      ],
+      "Productividad":[
+         "Object"
+      ]
+   },
+   "pairEvaluation":{
+      "Cumplimiento":[
+         "Object"
+      ],
+      "Liderazgo":[
+         "Object"
+      ],
+      "Compromiso":[
+         "Object"
+      ],
+      "Aprendizaje":[
+         "Object"
+      ],
+      "Productividad":[
+         "Object"
+      ],
+      "Eficacia":[
+         "Object"
+      ]
+   }
+}
+}
+        */
+      }
+    }
+     
 ```
