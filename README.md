@@ -52,7 +52,7 @@ function doGet(e) {
   
   // Se establece en la plantilla el texto de la fecha de vencimiento
   template.trialMessage = userInfo.expiredText || "";
-  
+  /* template.trialMessag = undefined */
   // Se establece en la plantilla el objeto del usuario
   template.userInfo = userInfo;
   
