@@ -1,3 +1,6 @@
+### ValidateUser()
+getActiveUser()
+
 ```json
 {
     "success": true,
@@ -72,3 +75,63 @@
     }
 }
 ```
+
+### nomina()
+params({"document": "1076656364", "year": "2014", "email": "proyectos@sinova.co"})
+
+```json
+{
+    "success": true,
+    "returnValue": {
+        "info": {
+            "name": "RUBEN DARIO SANCHEZ RAMIREZ",
+            "document": 1076656364,
+            "email": "proyectos@sinova.co",
+            "folderName": "Rubén D. Sánchez R.",
+            "startDate": "Wed Oct 01 2014 00:00:00 GMT-0500 (hora estándar de Colombia)",
+            "availableYears": [
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2022"
+            ]
+        },
+        "bills": [
+            {
+                "fileName": "SNVA-NOM-Desprendible102014.pdf",
+                "creation": "15/10/2017 09:15 AM",
+                "fileId": "0BzEiVSCzfq-XN0xGdGdWUW5QZm8",
+                "downloadUrl": "https://drive.google.com/uc?id=0BzEiVSCzfq-XN0xGdGdWUW5QZm8&export=download",
+                "month": 10,
+                "monthYear": "Octubre de 2014",
+                "monthName": "Octubre"
+            },
+            {
+                "fileName": "SNVA-NOM-Desprendible112014.pdf",
+                "creation": "15/10/2017 09:15 AM",
+                "fileId": "0BzEiVSCzfq-XTTRjLXlPR3JlN2c",
+                "downloadUrl": "https://drive.google.com/uc?id=0BzEiVSCzfq-XTTRjLXlPR3JlN2c&export=download",
+                "month": 11,
+                "monthYear": "Noviembre de 2014",
+                "monthName": "Noviembre"
+            },
+            {
+                "fileName": "SNVA-NOM-Desprendible122014.pdf",
+                "creation": "15/10/2017 09:15 AM",
+                "fileId": "0BzEiVSCzfq-XR0l4bnJ5UkdrOWc",
+                "downloadUrl": "https://drive.google.com/uc?id=0BzEiVSCzfq-XR0l4bnJ5UkdrOWc&export=download",
+                "month": 12,
+                "monthYear": "Diciembre de 2014",
+                "monthName": "Diciembre"
+            }
+        ],
+        "months": [],
+        "validEmail": true
+    }
+}
+```
+
